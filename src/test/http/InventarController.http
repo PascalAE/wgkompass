@@ -1,0 +1,41 @@
+### Inventar - Get all
+GET http://localhost:8080/inventar/all
+
+##############################################################################
+
+### Inventar - Get by ID
+GET http://localhost:8080/inventar/1
+
+##############################################################################
+
+### Inventar - Get all Inventar by WG ID
+GET http://localhost:8080/inventar/wg/3
+
+##############################################################################
+
+### Inventar - Create
+POST http://localhost:8080/inventar/create
+Content-Type: application/json
+
+{
+  "name": "Beispiel Inventar",
+  "preis": 100.50,
+  "kaufdatum": "2021-01-01",
+  "abschreibungssatz": 10.0,
+  "wgId": 1
+}
+
+##############################################################################
+
+### Inventar - Update
+PUT http://localhost:8080/inventar/update/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Geändertes Inventar",
+  "preis": 150.75,
+  "kaufdatum": "2021-01-01",
+  "abschreibungssatz": 5.0,
+  "wgId": 1
+}

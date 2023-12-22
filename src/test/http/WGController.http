@@ -1,0 +1,31 @@
+### WG - Get all
+GET http://localhost:8080/wg/all
+
+##############################################################################
+
+### WG - Get by ID
+GET http://localhost:8080/wg/2
+
+##############################################################################
+
+### WG - Create
+POST http://localhost:8080/wg/create
+Content-Type: application/json
+
+{
+  "name": "WG Beispiel"
+}
+
+##############################################################################
+
+### WG - Update
+PUT http://localhost:8080/wg/update/2
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "New WG 2"
+}
+
+##############################################################################
+

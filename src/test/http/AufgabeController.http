@@ -1,0 +1,54 @@
+### Aufgabe - Get all
+GET http://localhost:8080/aufgabe/all
+
+##############################################################################
+
+### Aufgabe - Get by ID
+GET http://localhost:8080/aufgabe/2
+
+##############################################################################
+
+### Aufgabe - Get all Aufgaben by WG ID
+GET http://localhost:8080/aufgabe/wg/2
+
+##############################################################################
+
+### Aufgabe - Create
+POST http://localhost:8080/aufgabe/create
+Content-Type: application/json
+
+{
+  "titel": "Aufgabe 1 - WG 2",
+  "beschreibung": "Beispiel Beschreibung",
+  "wgId": 2,
+  "verantwortlichesMitgliedId": 1
+}
+
+##############################################################################
+
+### Aufgabe - Update
+PUT http://localhost:8080/aufgabe/update/2
+Content-Type: application/json
+
+{
+  "id": 1,
+  "titel": "Aufgabe 2",
+  "beschreibung": "Geänderte Beschreibung",
+  "wgId": 1,
+  "verantwortlichesMitgliedId": 1
+}
+
+##############################################################################
+
+### Error Handling
+
+### Aufgabe - Create with special character
+POST http://localhost:8080/aufgabe/create
+Content-Type: application/json
+
+{
+  "titel": "Aufgabe with special chars %ç&*(*))=($$$$*/*ç/)(*",
+  "beschreibung": "Beispiel Beschreibung",
+  "wgId": 1,
+  "verantwortlichesMitgliedId": 1
+}

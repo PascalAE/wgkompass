@@ -1,0 +1,16 @@
+POST http://localhost:8080/dissolve/inventory
+Content-Type: application/json
+
+{
+  "wgId": 7,
+  "inventoryMappings": [
+    {
+      "inventarId": 5,
+      "mitgliedId": 7
+    },
+    {
+      "inventarId": 6,
+      "mitgliedId": 8
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+### Mitglied - Get all
+GET http://localhost:8080/mitglied/all
+
+##############################################################################
+
+### Mitglied - Get by ID
+GET http://localhost:8080/mitglied/1
+
+##############################################################################
+
+### Mitglied - Get all Mitglied by WG ID
+GET http://localhost:8080/mitglied/wg/3
+
+##############################################################################
+
+### Mitglied - Create
+POST http://localhost:8080/mitglied/create
+Content-Type: application/json
+
+{
+  "vorname": "Heinz",
+  "nachname": "Heinrichson",
+  "wgId": 7
+}
+
+##############################################################################
+
+### Mitglied - Update
+PUT http://localhost:8080/mitglied/update/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "vorname": "Maximilian",
+  "nachname": "Muster",
+  "wgId": 1
+}
+
